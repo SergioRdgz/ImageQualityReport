@@ -1,6 +1,19 @@
-Image Quality Report
+## Image Quality Report
 
+A Python tool for evaluating image and video upscaling quality using PSNR and SSIM metrics.
+Built as a practical exploration of quality assessment techniques
+---
+## Purpose
 
+Evaluating how close an upscaled frame is to the original high-resolution reference is a core part of validating that training data and model output.
+
+## Features
+
+- Per-image mode: compare a reference and distorted image with MSE, PSNR, SSIM score, SSIM heatmap
+- Per-video mode: step through frame sequences comparing HighRes vs Upscaled with live metric graphs
+- SSIM implemented from scratch using a Gaussian-weighted sliding window based on Wang et al.
+- Diff map and SSIM heatmap visualizations for spatial quality investigation
+- Frame-by-frame PSNR and SSIM graphs with current frame indicator
 ---
 dataset for the videos, city: https://people.tuebingen.mpg.de/msajjadi/FRVSR_Vid4.zip
 ---

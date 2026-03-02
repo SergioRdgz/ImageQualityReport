@@ -1,9 +1,6 @@
 import unittest
 import cv2
-from metrics import MSE
-from metrics import PSNR 
-from metrics import SSIM_windowed
-
+from metrics import MSE, PSNR, SSIM_windowed, SSIM_windowed_fast
 class TestMSE(unittest.TestCase):
     
     def setUp(self):
@@ -25,8 +22,8 @@ class TestMSE(unittest.TestCase):
         self.assertEqual(PSNR(self.pairs[0][0],self.pairs[0][0]),float('inf'))
 
     def test_identical_images_SSIM(self):
-        score, _ = SSIM_windowed(self.pairs[0][0],self.pairs[0][0])
-        self.assertAlmostEqual(score,1.0,places=2)
+        score, _ = SSIM_windowed_fast(self.pairs[0][0],self.pairs[0][0])
+        self.assertAlmostEqual(score,1.0,places=4)
 
     def test_matches_skimage_MSE(self):
         from skimage.metrics import mean_squared_error
