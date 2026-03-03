@@ -14,6 +14,13 @@ Evaluating how close an upscaled frame is to the original high-resolution refere
 - SSIM implemented from scratch using a Gaussian-weighted sliding window based on Wang et al.
 - Diff map and SSIM heatmap visualizations for spatial quality investigation
 - Frame-by-frame PSNR and SSIM graphs with current frame indicator
+
+
+
+https://github.com/user-attachments/assets/66e9bbf5-08a5-49ff-b4f3-cc0532b8ad1c
+
+
+
 ---
 dataset for the videos, city: https://people.tuebingen.mpg.de/msajjadi/FRVSR_Vid4.zip
 ---
